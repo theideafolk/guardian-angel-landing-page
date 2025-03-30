@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Text effects for hero headline */
+.hero-text {
+  text-shadow: 
+    1px 1px 0 rgba(255, 255, 255, 0.2),
+    2px 2px 0 rgba(0, 0, 0, 0.3),
+    0 0 10px rgba(255, 255, 255, 0.1),
+    0 0 20px rgba(255, 255, 255, 0.1);
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+@keyframes textIlluminate {
+  0%, 100% {
+    text-shadow: 
+      1px 1px 0 rgba(255, 255, 255, 0.2),
+      2px 2px 0 rgba(0, 0, 0, 0.3),
+      0 0 10px rgba(255, 255, 255, 0.1),
+      0 0 20px rgba(255, 255, 255, 0.1);
+  }
+  50% {
+    text-shadow: 
+      1px 1px 0 rgba(255, 255, 255, 0.4),
+      2px 2px 0 rgba(0, 0, 0, 0.3),
+      0 0 15px rgba(255, 255, 255, 0.4),
+      0 0 30px rgba(255, 255, 255, 0.3),
+      0 0 40px rgba(255, 255, 255, 0.2);
+  }
+}
+
+.text-illuminate {
+  animation: textIlluminate 5s ease-in-out infinite;
+}
+
+/* Button illumination effect */
+@keyframes buttonGlow {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(185, 128, 127, 0.5), 0 0 20px rgba(185, 128, 127, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(185, 128, 127, 0.7), 0 0 30px rgba(185, 128, 127, 0.4);
+  }
+}
+
+.button-illuminate {
+  animation: buttonGlow 3s ease-in-out infinite;
+  transform: translateY(0);
+  transition: transform 0.3s ease;
+}
+
+.button-illuminate:hover {
+  transform: translateY(-2px);
+}
